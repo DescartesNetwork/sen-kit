@@ -12,6 +12,7 @@ function Application(props) {
   return <Card
     style={{
       backdropFilter: 'blur(15px)',
+      WebkitBackdropFilter: 'blur(15px)',
       borderColor: '#FFFFFF22',
     }}
     hoverable
@@ -41,7 +42,7 @@ class Home extends Component {
   render() {
     return <Row gutter={[16, 16]} align="center" justify="center">
       <Col span={24} style={{ height: 132 }} />
-      {[1, 2, 3, 4, 5, 6].map(i => <Col key={i} xs={{ span: 8 }}>
+      {[1, 2, 3, 4, 5, 6].map(i => <Col key={i} sm={{ span: 24 }} md={{ span: 8 }}>
         <Application />
       </Col>)}
     </Row>
