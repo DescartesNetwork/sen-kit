@@ -3,8 +3,9 @@ import { withRouter } from 'react-router-dom';
 import { loremIpsum } from 'lorem-ipsum';
 
 import {
-  Row, Col, Button, Typography
+  Row, Col, Button, Typography, Input,
 } from 'antd';
+import { HiPaperAirplane } from "react-icons/hi";
 
 import Widget from 'components/widget';
 
@@ -19,6 +20,16 @@ function Contents() {
     </Col>
     <Col span={24}>
       <Text>{loremIpsum({ count: 1, units: 'paragraphs' })}</Text>
+    </Col>
+    <Col span={24}>
+      <Input
+        suffix={<Button
+          type="text"
+          shape="circle"
+          icon={<HiPaperAirplane />}
+          style={{ marginRight: -8 }}
+        />}
+      />
     </Col>
     <Col span={24}>
       <Row gutter={[16, 16]} justify="end">

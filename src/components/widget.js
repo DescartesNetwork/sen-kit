@@ -49,7 +49,7 @@ const Widget = forwardRef((props, ref) => {
   // Render
   return <Col
     {...responsive}
-    style={{ height: 464, overflowY: 'visible' }}
+    style={{ height: 1400 / 3 - 16, overflowY: 'visible' }}
     ref={ref}
   >
     <Wrapper>
