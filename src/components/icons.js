@@ -10,7 +10,6 @@ export * from 'react-icons/go';
 export * from 'react-icons/gr';
 export * from 'react-icons/hi';
 export * from 'react-icons/im';
-export * from 'react-icons/io';
 export * from 'react-icons/io5';
 export * from 'react-icons/md';
 export * from 'react-icons/ri';
