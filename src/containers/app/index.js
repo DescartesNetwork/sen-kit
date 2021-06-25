@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
-import { Layout, Row, Col } from 'antd';
+import { Layout, Row, Col, Brand } from 'components';
 
 import Home from 'containers/home';
-
-const { Header, Footer, Content } = Layout;
 
 
 class App extends Component {
 
   render() {
     return <Layout style={{ backgroundColor: '#00000000' }}>
-      <Header style={{ backgroundColor: '#00000000' }}>Header</Header>
-      <Content style={{ padding: 8 }}>
+      <Layout.Header style={{ backgroundColor: '#00000000' }}>
+        <Row gutter={[16, 16]}>
+          <Col>
+            <Brand />
+          </Col>
+        </Row>
+      </Layout.Header>
+      <Layout.Content style={{ padding: 8 }}>
         <Row gutter={[16, 16]} justify="center">
           <Col span={24} style={{ maxWidth: 1400 }}>
             <Switch>
@@ -22,8 +26,8 @@ class App extends Component {
             </Switch>
           </Col>
         </Row>
-      </Content>
-      <Footer style={{ backgroundColor: '#00000000' }}>Footer</Footer>
+      </Layout.Content>
+      <Layout.Footer style={{ backgroundColor: '#00000000' }}>Footer</Layout.Footer>
     </Layout>
   }
 }

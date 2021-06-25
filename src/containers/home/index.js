@@ -4,13 +4,11 @@ import { loremIpsum } from 'lorem-ipsum';
 
 import {
   Row, Col, Button, Typography, Input,
-} from 'antd';
-import { HiPaperAirplane } from "react-icons/hi";
+  Widget, Icons
+} from 'components';
 
-import Widget from 'components/widget';
-
+const { FcFaq } = Icons;
 const { Title, Text } = Typography;
-
 
 
 function Contents() {
@@ -26,8 +24,8 @@ function Contents() {
         suffix={<Button
           type="text"
           shape="circle"
-          icon={<HiPaperAirplane />}
-          style={{ marginRight: -8 }}
+          icon={<FcFaq style={{ verticalAlign: 'middle' }} />}
+          style={{ marginRight: -7 }}
         />}
       />
     </Col>
