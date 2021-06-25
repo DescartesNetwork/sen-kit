@@ -10,15 +10,21 @@
     "antd": "^4.16.5",
     "craco-less": "^1.17.1",
     "lorem-ipsum": "^2.0.3",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "serve": "^12.0.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "nodemon --watch ./src/static/styles/theme.js --exec \"PORT=5000 craco start\"",
+    "start": "nodemon --watch ./src/static/styles/theme.js --exec \"REACT_APP_ENV=development PORT=5000 craco start\"",
     "build": "craco build",
+    "stag": "REACT_APP_ENV=staging craco build",
+    "serve": "serve -s build -l 80",
+    "prod": "npm run clean && babel src/components -d dist --copy-files",
+    "clean": "rm -rf ./dist",
     "test": "craco test"
   },
   "eslintConfig": {
@@ -40,6 +46,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
     "nodemon": "^2.0.7"
   }
 }
