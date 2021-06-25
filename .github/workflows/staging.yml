@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Welcome
-        run: echo Start deploying SenSwap UI
+        run: echo Start deploying Sen UI
       - name: Build Dockerfile
         run: |
           sed -i 's/__ENV__/stag/g' Dockerfile
