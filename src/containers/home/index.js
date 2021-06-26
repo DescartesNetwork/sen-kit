@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { loremIpsum } from 'lorem-ipsum';
 
 import {
   Row, Col, Button, Typography, Input,
-  Widget, Icons
+  Widget, Icons, Animate
 } from 'components';
 
 const { FcFaq } = Icons;
@@ -12,6 +12,9 @@ const { Title, Text } = Typography;
 
 
 function Contents() {
+  const [more, setMore] = useState(false);
+  const onMore = () => setMore(!more);
+
   return <Row gutter={[16, 16]} align="middle">
     <Col span={24}>
       <Title level={3}>{loremIpsum({ count: 5, units: 'word' })}</Title>
@@ -19,6 +22,11 @@ function Contents() {
     <Col span={24}>
       <Text>{loremIpsum({ count: 1, units: 'paragraphs' })}</Text>
     </Col>
+    <Animate transitionName="fade">
+      {more ? <Col span={24}>
+        <Text>{loremIpsum({ count: 1, units: 'paragraphs' })}</Text>
+      </Col> : null}
+    </Animate>
     <Col span={24}>
       <Input
         suffix={<Button
@@ -35,7 +43,7 @@ function Contents() {
           <Button>Default</Button>
         </Col>
         <Col >
-          <Button type="primary">Primary</Button>
+          <Button type="primary" onClick={onMore}>Primary</Button>
         </Col>
       </Row>
     </Col>

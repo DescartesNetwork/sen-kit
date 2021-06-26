@@ -1,2 +1,4 @@
 import './animate.less';
-export * from 'rc-animate';
+import Animate from 'rc-animate';
+
+export default Animate;
