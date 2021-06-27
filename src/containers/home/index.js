@@ -51,24 +51,24 @@ class Home extends Component {
     return <Row gutter={[16, 16]} align="center" justify="center">
       <Col span={24} style={{ height: 64 }} />
       {/* Row 0 */}
-      <Widget variant="default" size="large">
+      <Widget type="default" size="large">
         <Contents />
       </Widget>
       {/* Row 1 */}
-      <Widget variant="solid" size="small">
+      <Widget type="solid" size="small">
         <Contents />
       </Widget>
-      <Widget variant="glass" size="small">
+      <Widget type="glass" size="small">
         <Contents />
       </Widget>
-      <Widget variant="glass" size="small">
+      <Widget type="glass" size="small">
         <Contents />
       </Widget>
       {/* Row 2 */}
-      <Widget variant="glass" size="small">
+      <Widget type="glass" size="small">
         <Contents />
       </Widget>
-      <Widget variant="solid" size="medium">
+      <Widget type="solid" size="medium">
         <Contents />
       </Widget>
       <Col span={24} style={{ height: 64 }} />
