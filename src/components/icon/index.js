@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import 'ionicons';
 
 const Icon = forwardRef((props, ref) => {
   const { className, ...others } = props;
