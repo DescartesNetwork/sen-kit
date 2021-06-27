@@ -2,13 +2,7 @@ import React, { Component, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { loremIpsum } from 'lorem-ipsum';
 
-import {
-  Row, Col, Button, Typography, Input,
-  Widget, Icons, Animate
-} from 'components';
-
-const { FcFaq } = Icons;
-const { Title, Text } = Typography;
+import { Row, Col, Button, Typography, Input, Widget, Animate } from 'components';
 
 
 function Contents() {
@@ -17,14 +11,14 @@ function Contents() {
 
   return <Row gutter={[16, 16]} align="middle">
     <Col span={24}>
-      <Title level={3}>{loremIpsum({ count: 5, units: 'word' })}</Title>
+      <Typography.Title level={3}>{loremIpsum({ count: 5, units: 'word' })}</Typography.Title>
     </Col>
     <Col span={24}>
-      <Text>{loremIpsum({ count: 1, units: 'paragraphs' })}</Text>
+      <Typography.Text>{loremIpsum({ count: 1, units: 'paragraphs' })}</Typography.Text>
     </Col>
     <Animate transitionName="fade">
       {more ? <Col span={24}>
-        <Text>{loremIpsum({ count: 1, units: 'paragraphs' })}</Text>
+        <Typography.Text>{loremIpsum({ count: 1, units: 'paragraphs' })}</Typography.Text>
       </Col> : null}
     </Animate>
     <Col span={24}>
@@ -32,7 +26,7 @@ function Contents() {
         suffix={<Button
           type="text"
           shape="circle"
-          icon={<FcFaq style={{ verticalAlign: 'middle' }} />}
+          icon={<ion-icon name="thumbs-up" class="anticon" />}
           style={{ marginRight: -7 }}
         />}
       />
