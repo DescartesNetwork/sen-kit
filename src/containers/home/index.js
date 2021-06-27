@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { loremIpsum } from 'lorem-ipsum';
 
-import { Row, Col, Button, Typography, Input, Widget, Animate } from 'components';
+import { Row, Col, Button, Typography, Input, Widget, Animate, Icon } from 'components';
 
 
 function Contents() {
@@ -26,7 +26,7 @@ function Contents() {
         suffix={<Button
           type="text"
           shape="circle"
-          icon={<ion-icon name="thumbs-up" class="anticon" />}
+          icon={<Icon name="thumbs-up"/>}
           style={{ marginRight: -7 }}
         />}
       />
