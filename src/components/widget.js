@@ -39,8 +39,8 @@ const Widget = forwardRef((props, ref) => {
   // Props
   const { size, type, children } = props;
   // Compute widget size
-  let responsive = { xs: { span: 24 }, md: { span: 12 }, lg: { span: 8 } }
-  if (size === "medium") responsive = { xs: { span: 24 }, md: { span: 24 }, lg: { span: 16 } }
+  let responsive = { xs: { span: 24 }, md: { span: 12 }, lg: { span: 6 } }
+  if (size === "medium") responsive = { xs: { span: 24 }, md: { span: 24 }, lg: { span: 12 } }
   if (size === "large") responsive = { xs: { span: 24 }, md: { span: 24 }, lg: { span: 24 } }
   // Wrap children
   let Wrapper = DefaultCard;
@@ -49,7 +49,7 @@ const Widget = forwardRef((props, ref) => {
   // Render
   return <Col
     {...responsive}
-    style={{ height: 1400 / 3 - 16, overflowY: 'visible' }}
+    style={{ height: 1400 / 4 - 16, overflowY: 'visible' }}
     ref={ref}
   >
     <Wrapper>
