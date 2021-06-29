@@ -17,6 +17,7 @@ const SolidCard = (props) => {
       backgroundColor: '#2D3355',
       overflow: 'scroll'
     }}
+    bodyStyle={{ height: '100%' }}
     hoverable
   >{children}</Card>
 }
@@ -31,6 +32,7 @@ const GlassCard = (props) => {
       height: '100%',
       overflow: 'scroll'
     }}
+    bodyStyle={{ height: '100%' }}
     hoverable
   >{children}</Card>
 }
