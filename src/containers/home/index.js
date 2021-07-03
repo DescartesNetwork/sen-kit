@@ -9,7 +9,7 @@ function Contents() {
   const [more, setMore] = useState(false);
   const onMore = () => setMore(!more);
 
-  return <Row gutter={[32, 32]} align="middle">
+  return <Row gutter={[16, 16]} align="middle">
     <Col span={24}>
       <Typography.Title level={3}>{loremIpsum({ count: 5, units: 'word' })}</Typography.Title>
     </Col>
