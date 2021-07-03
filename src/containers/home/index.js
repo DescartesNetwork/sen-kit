@@ -9,7 +9,7 @@ function Contents() {
   const [more, setMore] = useState(false);
   const onMore = () => setMore(!more);
 
-  return <Row gutter={[16, 16]} align="middle">
+  return <Row gutter={[32, 32]} align="middle">
     <Col span={24}>
       <Typography.Title level={3}>{loremIpsum({ count: 5, units: 'word' })}</Typography.Title>
     </Col>
@@ -26,7 +26,7 @@ function Contents() {
         suffix={<Button
           type="text"
           shape="circle"
-          icon={<Icon name="thumbs-up"/>}
+          icon={<Icon name="thumbs-up" />}
           style={{ marginRight: -7 }}
         />}
       />
@@ -52,7 +52,9 @@ class Home extends Component {
       <Col span={24} style={{ height: 64 }} />
       {/* Row 0 */}
       <Widget type="default" size="large">
-        <Contents />
+        <Col span={24}>
+          <Contents />
+        </Col>
       </Widget>
       {/* Row 1 */}
       <Widget type="solid" size="small">
