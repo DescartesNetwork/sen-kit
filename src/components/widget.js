@@ -5,7 +5,16 @@ import { Card, Col } from 'antd';
 
 const DefaultCard = (props) => {
   const { children } = props;
-  return children;
+  return <Card
+    style={{
+      background: 'transparent',
+      border: 'none',
+      height: '100%',
+      overflow: 'scroll',
+      borderRadius: 0,
+    }}
+    bodyStyle={{ height: '100%' }}
+  >{children}</Card>
 }
 
 const SolidCard = (props) => {
