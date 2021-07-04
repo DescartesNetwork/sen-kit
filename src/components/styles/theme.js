@@ -1,5 +1,8 @@
 // Available vars: https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
 module.exports = {
+  // Basis
+  hack: `true;@import "${require.resolve('./index.less')}"`,
+  
   // Colors
   '@primary-color': '#F9575E',
   '@body-background': '#181C36',
