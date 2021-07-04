@@ -47,7 +47,7 @@ const Widget = forwardRef((props, ref) => {
   // Props
   const { size, type, children } = props;
   // Compute widget size
-  let responsive = { xs: { span: 24 }, xs: { span: 12 }, xl: { span: 6 } }
+  let responsive = { xs: { span: 24 }, sm: { span: 12 }, xl: { span: 6 } }
   if (size === "medium") responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
   if (size === "large") responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 24 } }
   // Wrap children
