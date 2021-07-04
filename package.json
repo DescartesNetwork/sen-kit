@@ -1,6 +1,6 @@
 {
   "name": "sen-kit",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.14.1",
@@ -19,7 +19,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "nodemon --watch ./src/static/styles/theme.js --exec \"REACT_APP_ENV=development PORT=5000 craco start\"",
+    "start": "nodemon --watch ./src/components/styles/theme.js --exec \"REACT_APP_ENV=development PORT=8000 craco start\"",
     "build": "craco build",
     "stag": "REACT_APP_ENV=staging craco build",
     "serve": "serve -s build -l 80",
