@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "12.x"
           registry-url: "https://registry.npmjs.org"
-      - run: npm install && npm run prod && cp -r ./dist/* ./ && cp -r ./src/static ./
+      - run: npm install && npm run prod && cp -r ./dist/* ./
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
