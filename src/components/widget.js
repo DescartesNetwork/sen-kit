@@ -43,9 +43,7 @@ const GlassCard = (props) => {
   >{children}</Card>
 }
 
-const Widget = forwardRef((props, ref) => {
-  // Props
-  const { size, type, children, Wrapper } = props;
+const Widget = forwardRef(({ size, type, children, Wrapper, ...others }, ref) => {
   // Compute widget size
   let responsive = { xs: { span: 24 }, sm: { span: 12 }, xl: { span: 6 } }
   if (size === "medium") responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
@@ -57,6 +55,7 @@ const Widget = forwardRef((props, ref) => {
   // Render
   return <Col
     {...responsive}
+    {...others}
     style={{ height: 1400 / 4 - 16, overflowY: 'visible' }}
     ref={ref}
   >
