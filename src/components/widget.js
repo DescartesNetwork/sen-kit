@@ -76,7 +76,7 @@ Widget.defaultProps = {
 Widget.propTypes = {
   type: PropTypes.oneOf(['default', 'solid', 'glass']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  Wrapper: PropTypes.node,
+  Wrapper: PropTypes.elementType,
 }
 
 export default Widget;

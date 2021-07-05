@@ -44,6 +44,12 @@ function Contents() {
   </Row>
 }
 
+const Wrapper = ({ children }) => <Row guter={[16, 16]}>
+  <Col span={24}>
+    {children}
+  </Col>
+</Row>
+
 
 class Home extends Component {
 
@@ -70,7 +76,7 @@ class Home extends Component {
       <Widget type="glass" size="small">
         <Contents />
       </Widget>
-      <Widget type="solid" size="medium">
+      <Widget type="solid" size="medium" Wrapper={Wrapper}>
         <Contents />
       </Widget>
       <Col span={24} style={{ height: 64 }} />
