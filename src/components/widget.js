@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { Card, Col } from 'antd';
@@ -45,7 +45,7 @@ const GlassCard = (props) => {
 
 const Widget = forwardRef((props, ref) => {
   // Props
-  const { size, type, children } = props;
+  const { size, type, children, Wrapper } = props;
   // Compute widget size
   let responsive = { xs: { span: 24 }, sm: { span: 12 }, xl: { span: 6 } }
   if (size === "medium") responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
@@ -61,7 +61,9 @@ const Widget = forwardRef((props, ref) => {
     ref={ref}
   >
     <Wrapper>
-      {children}
+      <CardWrapper>
+        {children}
+      </CardWrapper>
     </Wrapper>
   </Col>
 });
@@ -69,11 +71,13 @@ const Widget = forwardRef((props, ref) => {
 Widget.defaultProps = {
   type: 'default',
   size: 'small',
+  Wrapper: Fragment,
 }
 
 Widget.propTypes = {
   type: PropTypes.oneOf(['default', 'solid', 'glass']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
+  Wrapper: PropTypes.object,
 }
 
 export default Widget;
