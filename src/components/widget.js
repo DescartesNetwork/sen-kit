@@ -51,9 +51,9 @@ const Widget = forwardRef((props, ref) => {
   if (size === "medium") responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
   if (size === "large") responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 24 } }
   // Wrap children
-  let Wrapper = DefaultCard;
-  if (type === 'solid') Wrapper = SolidCard;
-  if (type === 'glass') Wrapper = GlassCard;
+  let CardWrapper = DefaultCard;
+  if (type === 'solid') CardWrapper = SolidCard;
+  if (type === 'glass') CardWrapper = GlassCard;
   // Render
   return <Col
     {...responsive}
