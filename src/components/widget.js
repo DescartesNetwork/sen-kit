@@ -17,13 +17,9 @@ const DefaultCard = (props) => {
 const SolidCard = (props) => {
   const { children } = props;
   return <Card
-    style={{
-      border: 'none',
-      height: '100%',
-      backgroundColor: '#2D3355',
-      overflow: 'scroll'
-    }}
+    style={{ height: '100%', backgroundColor: '#2D3355', overflow: 'scroll' }}
     bodyStyle={{ height: '100%' }}
+    bordered={false}
     hoverable
   >{children}</Card>
 }
@@ -31,13 +27,7 @@ const SolidCard = (props) => {
 const GlassCard = (props) => {
   const { children } = props;
   return <Card
-    style={{
-      backdropFilter: 'blur(20px)',
-      WebkitBackdropFilter: 'blur(20px)',
-      borderColor: '#FFFFFF22',
-      height: '100%',
-      overflow: 'scroll'
-    }}
+    style={{ height: '100%', overflow: 'scroll' }}
     bodyStyle={{ height: '100%' }}
     hoverable
   >{children}</Card>

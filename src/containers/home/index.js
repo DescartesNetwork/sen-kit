@@ -44,7 +44,7 @@ function Contents() {
   </Row>
 }
 
-const Wrapper = ({ children }) => <Row guter={[16, 16]}>
+const Wrapper = ({ children }) => <Row gutter={[16, 16]}>
   <Col span={24}>
     {children}
   </Col>
