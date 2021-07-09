@@ -2,9 +2,13 @@
 module.exports = {
   // Basis
   hack: `true;@import "${require.resolve('./index.less')}"`,
-  
+
   // Colors
   '@primary-color': '#F9575E',
+  '@info-color': '#37CDFA',
+  '@success-color': '#3DBA4E',
+  '@warning-color': '#FCB017',
+  '@error-color': '#F2323F',
   '@body-background': '#181C36',
   '@component-background': '#2D3355',
 
