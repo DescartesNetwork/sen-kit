@@ -14,9 +14,11 @@ const importDependency = () => {
 importDependency();
 
 const Icon = forwardRef((props, ref) => {
-  const { className, ...others } = props;
+  const { className, name, ...others } = props;
   const cln = className ? 'anticon ' + className : 'anticon';
-  return <ion-icon class={cln} ref={ref} {...others} />
+  return <span className={cln} {...others}>
+    <ion-icon ref={ref} name={name} />
+  </span>
 });
 
 export default Icon;
