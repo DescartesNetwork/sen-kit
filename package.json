@@ -1,6 +1,6 @@
 {
   "name": "sen-kit",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.14.1",

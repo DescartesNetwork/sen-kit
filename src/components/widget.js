@@ -33,22 +33,19 @@ const GlassCard = (props) => {
   >{children}</Card>
 }
 
-const Widget = forwardRef(({ size, type, children, Wrapper, ...others }, ref) => {
+const Widget = forwardRef(({ size, type, children, Wrapper, style, ...rest }, ref) => {
   // Compute widget size
   let responsive = { xs: { span: 24 }, sm: { span: 12 }, xl: { span: 6 } }
-  if (size === "medium") responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
-  if (size === "large") responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 24 } }
+  if (size === 'medium') responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
+  if (size === 'large') responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 24 } }
   // Wrap children
   let CardWrapper = DefaultCard;
   if (type === 'solid') CardWrapper = SolidCard;
   if (type === 'glass') CardWrapper = GlassCard;
+  // Combine styles
+  const combinedStyle = { ...style, height: 1400 / 4 - 16, overflowY: 'visible' }
   // Render
-  return <Col
-    {...responsive}
-    {...others}
-    style={{ height: 1400 / 4 - 16, overflowY: 'visible' }}
-    ref={ref}
-  >
+  return <Col {...rest} {...responsive} style={combinedStyle} ref={ref}>
     <Wrapper>
       <CardWrapper>
         {children}
