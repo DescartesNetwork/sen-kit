@@ -1,6 +1,6 @@
 // Available vars: https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
 
-const BASE_BACKGROUND = 'linear-gradient(105.88deg, rgba(26, 30, 56, 0.5) 0%, rgba(35, 31, 54, 0.5) 95.29%);';
+const BASE_BACKGROUND = 'linear-gradient(105.88deg, rgba(26, 30, 56, 0.25) 0%, rgba(35, 31, 54, 0.65) 100%)';
 
 module.exports = {
   // Basis
