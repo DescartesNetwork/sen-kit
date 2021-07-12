@@ -34,7 +34,7 @@ function Contents() {
     <Col span={24}>
       <Row gutter={[16, 16]} justify="end">
         <Col >
-          <Button type="text" className="btnContained">Cancel</Button>
+          <Button type="text" className="contained">Cancel</Button>
         </Col>
         <Col >
           <Button>Default</Button>
