@@ -2,7 +2,10 @@ import React, { Component, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { loremIpsum } from 'lorem-ipsum';
 
-import { Row, Col, Button, Typography, Input, Widget, Animate, Icon } from 'components';
+import {
+  Row, Col, Button, Typography, Input, Widget, Animate, Icon,
+  Modal, Card,
+} from 'components';
 
 
 function Contents() {
@@ -83,6 +86,22 @@ class Home extends Component {
       <Widget type="solid" size="medium" Wrapper={Wrapper}>
         <Contents />
       </Widget>
+      <Col span={24}>
+        <Modal visible={true}>
+          <Row gutter={[16, 16]}>
+            <Col span={24} style={{ height: 32 }} />
+            <Col span={24}>
+              <Card bordered={false}>
+                <Row gutter={[16, 16]}>
+                  <Col span={24}>
+                    <p>Test Modal</p>
+                  </Col>
+                </Row>
+              </Card>
+            </Col>
+          </Row>
+        </Modal>
+      </Col>
       <Col span={24} style={{ height: 64 }} />
     </Row>
   }
