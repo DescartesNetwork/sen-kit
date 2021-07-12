@@ -1,4 +1,7 @@
 // Available vars: https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+
+const BASE_BACKGROUND = 'linear-gradient(105.88deg, rgba(26, 30, 56, 0.5) 0%, rgba(35, 31, 54, 0.5) 95.29%);';
+
 module.exports = {
   // Basis
   hack: `true;@import "${require.resolve('./index.less')}"`,
@@ -17,14 +20,14 @@ module.exports = {
 
   // Border
   '@border-radius-base': '8px',
-  '@border-color-base': '#FFFFFF22',
-  '@border-width-base': '2px',
+  '@border-color-base': 'rgba(255, 255, 255, 0.2)',
+  '@border-width-base': '1px',
 
   // Card
   '@card-radius': '16px',
-  '@card-actions-background': 'linear-gradient(135deg, rgba(48, 55, 95, 0.5) 0%, rgba(153, 166, 248, 0.1) 95.29%)',
-  '@card-background': 'linear-gradient(135deg, rgba(48, 55, 95, 0.5) 0%, rgba(153, 166, 248, 0.1) 95.29%)',
+  '@card-actions-background': BASE_BACKGROUND,
+  '@card-background': BASE_BACKGROUND,
 
   // Drawer
-  '@drawer-bg': 'linear-gradient(135deg, rgba(48, 55, 95, 0.5) 0%, rgba(153, 166, 248, 0.1) 95.29%)',
+  '@drawer-bg': BASE_BACKGROUND,
 }

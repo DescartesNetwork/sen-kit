@@ -67,7 +67,7 @@ class Home extends Component {
         <Contents />
       </Widget>
       <Widget type="glass" size="small">
-        <Contents />
+        {/* <Contents /> */}
       </Widget>
       <Widget type="glass" size="small">
         <Contents />
