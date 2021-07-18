@@ -36,7 +36,7 @@ const GlassCard = (props) => {
 const Widget = forwardRef(({ size, type, children, Wrapper, style, ...rest }, ref) => {
   // Compute widget size
   let responsive = { xs: { span: 24 }, sm: { span: 12 }, xl: { span: 6 } }
-  if (size === 'medium') responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
+  if (size === 'middle') responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
   if (size === 'large') responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 24 } }
   // Wrap children
   let CardWrapper = DefaultCard;
@@ -62,7 +62,7 @@ Widget.defaultProps = {
 
 Widget.propTypes = {
   type: PropTypes.oneOf(['default', 'solid', 'glass']),
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'middle', 'large']),
   Wrapper: PropTypes.elementType,
 }
 

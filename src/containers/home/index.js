@@ -83,7 +83,7 @@ class Home extends Component {
       <Widget type="glass" size="small">
         <Contents />
       </Widget>
-      <Widget type="solid" size="medium" Wrapper={Wrapper}>
+      <Widget type="solid" size="middle" Wrapper={Wrapper}>
         <Contents />
       </Widget>
       <Col span={24}>
