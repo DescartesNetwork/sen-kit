@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Welcome
-        run: echo Start deploying SenUI
-      - name: Publish npm package
+        run: echo Start deploying Sen UI
+      - name: Publish npm package --access=public
         uses: actions/setup-node@v2
         with:
           node-version: "12.x"

@@ -1,6 +1,6 @@
 {
-  "name": "sen-kit",
-  "version": "1.0.41",
+  "name": "@senswap/sen-ui",
+  "version": "0.0.1",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.14.1",
