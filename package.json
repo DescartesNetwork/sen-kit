@@ -28,6 +28,16 @@
     "clean": "rm -rf ./dist",
     "test": "craco test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DescartesNetwork/sen-ui.git"
+  },
+  "author": "Tu Phan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DescartesNetwork/sen-ui/issues"
+  },
+  "homepage": "https://github.com/DescartesNetwork/sen-ui#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
