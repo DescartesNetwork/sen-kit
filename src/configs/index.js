@@ -1,6 +1,6 @@
-import basics from './basics.config';
+import basics from './basics.config'
 
-const env = process.env.REACT_APP_ENV || process.env.NODE_ENV;
+const env = process.env.REACT_APP_ENV || process.env.NODE_ENV
 
 const configs = {
   env,
@@ -10,4 +10,4 @@ const configs = {
 /**
  * Module exports
  */
-export default configs;
+export default configs

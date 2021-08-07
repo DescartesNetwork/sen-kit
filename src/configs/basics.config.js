@@ -27,4 +27,4 @@ configs.production = {
 /**
  * Module exports
  */
-export default configs;
+export default configs

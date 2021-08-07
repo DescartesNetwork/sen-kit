@@ -1,8 +1,9 @@
 // Available vars: https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
 
-const DARK_SOLID_BG = '#181C36';
-const LIGHT_SOLID_BG = '#2D3355';
-const GLASS_BG = 'linear-gradient(135deg, rgba(26, 30, 56, 0.45) 0%, rgba(35, 31, 54, 0.75) 100%)';
+const DARK_SOLID_BG = '#181C36'
+const LIGHT_SOLID_BG = '#2D3355'
+const GLASS_BG =
+  'linear-gradient(135deg, rgba(26, 30, 56, 0.45) 0%, rgba(35, 31, 54, 0.75) 100%)'
 
 module.exports = {
   // Basis
