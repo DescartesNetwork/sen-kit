@@ -61,8 +61,8 @@ const Widget = forwardRef(
     if (type === 'solid') CardWrapper = SolidCard
     if (type === 'glass') CardWrapper = GlassCard
     // Combine styles
-    // height = 1440 / 4 - 16
-    const combinedStyle = { ...style, height: 344, overflowY: 'visible' }
+    // height = 1400 / 4 - 16
+    const combinedStyle = { ...style, height: 334, overflowY: 'visible' }
     // Render
     return (
       <Col {...rest} {...responsive} style={combinedStyle} ref={ref}>
