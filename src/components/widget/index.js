@@ -1,7 +1,7 @@
 import React, { forwardRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import { Row, Col, Card } from 'antd'
+import { Row, Col, Card, Typography } from 'antd'
 
 import './style.less'
 
@@ -48,35 +48,37 @@ const GlassCard = (props) => {
   )
 }
 
-const Widget = forwardRef(({ size, type, header, children, Wrapper }, ref) => {
-  // Compute widget size
-  let responsive = { xs: { span: 24 }, sm: { span: 12 }, xl: { span: 6 } }
-  if (size === 'middle')
-    responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
-  if (size === 'large')
-    responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 24 } }
-  // Wrap children
-  let CardWrapper = DefaultCard
-  if (type === 'solid') CardWrapper = SolidCard
-  if (type === 'glass') CardWrapper = GlassCard
-  // Styles: height = 1400 / 4 - 16
-  const style = { height: 334, overflowY: 'visible' }
-  // Render
-  return (
-    <Col {...responsive}>
-      <Row gutter={[2, 2]}>
-        <Col span={24} style={{ height: 24, overflow: 'visible' }}>
-          {header}
-        </Col>
-        <Col span={24} style={style} ref={ref}>
-          <Wrapper>
-            <CardWrapper>{children}</CardWrapper>
-          </Wrapper>
-        </Col>
-      </Row>
-    </Col>
-  )
-})
+const Widget = forwardRef(
+  ({ size, type, header, children, Wrapper, style }, ref) => {
+    // Compute widget size
+    let responsive = { xs: { span: 24 }, sm: { span: 12 }, xl: { span: 6 } }
+    if (size === 'middle')
+      responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 12 } }
+    if (size === 'large')
+      responsive = { xs: { span: 24 }, md: { span: 24 }, xl: { span: 24 } }
+    // Wrap children
+    let CardWrapper = DefaultCard
+    if (type === 'solid') CardWrapper = SolidCard
+    if (type === 'glass') CardWrapper = GlassCard
+    // Widget style: height = 1400 / 4 - 16
+    const widgetStyle = { height: 334, overflowY: 'visible' }
+    // Render
+    return (
+      <Col style={style} {...rest} {...responsive}>
+        <Row gutter={[2, 2]}>
+          <Col span={24} style={{ height: 24, overflow: 'visible' }}>
+            {header}
+          </Col>
+          <Col span={24} style={widgetStyle} ref={ref}>
+            <Wrapper>
+              <CardWrapper>{children}</CardWrapper>
+            </Wrapper>
+          </Col>
+        </Row>
+      </Col>
+    )
+  },
+)
 
 Widget.defaultProps = {
   type: 'default',
