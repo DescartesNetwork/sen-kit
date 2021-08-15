@@ -86,13 +86,29 @@ class Home extends Component {
       <Row gutter={[16, 16]} align="center" justify="center">
         <Col span={24} style={{ height: 64 }} />
         {/* Row 0 */}
-        <Widget type="default" size="large">
+        <Widget
+          header={
+            <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+              Header
+            </Typography.Text>
+          }
+          type="default"
+          size="large"
+        >
           <Col span={24}>
             <Contents />
           </Col>
         </Widget>
         {/* Row 1 */}
-        <Widget type="solid" size="small">
+        <Widget
+          header={
+            <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+              Header
+            </Typography.Text>
+          }
+          type="solid"
+          size="small"
+        >
           <Contents />
         </Widget>
         <Widget type="glass" size="small">
