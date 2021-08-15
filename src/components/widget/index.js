@@ -1,7 +1,7 @@
 import React, { forwardRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import { Row, Col, Card, Typography } from 'antd'
+import { Row, Col, Card } from 'antd'
 
 import './style.less'
 
@@ -49,7 +49,7 @@ const GlassCard = (props) => {
 }
 
 const Widget = forwardRef(
-  ({ size, type, header, children, Wrapper, style }, ref) => {
+  ({ size, type, header, children, Wrapper, style, ...rest }, ref) => {
     // Compute widget size
     let responsive = { xs: { span: 24 }, sm: { span: 12 }, xl: { span: 6 } }
     if (size === 'middle')
