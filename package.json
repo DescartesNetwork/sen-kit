@@ -1,13 +1,14 @@
 {
   "name": "@senswap/sen-ui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "antd": "^4.16.5",
+    "antd": "^4.16.12",
     "craco-less": "^1.17.1",
+    "perfect-scrollbar": "^1.5.2",
     "prop-types": "^15.7.2",
     "rc-animate": "^3.1.1",
     "rc-tween-one": "^2.7.3",

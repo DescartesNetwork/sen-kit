@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
 
-import { Layout, Row, Col, Brand } from 'components'
+import { Layout, Row, Col, Brand, Button, Icon } from 'components'
 
 import Home from 'containers/home'
 
@@ -27,7 +27,16 @@ class App extends Component {
           </Row>
         </Layout.Content>
         <Layout.Footer style={{ backgroundColor: '#00000000' }}>
-          Footer
+          <Row gutter={[16, 16]}>
+            <Col span={24}>
+              <Button
+                type="text"
+                className="contained"
+                icon={<Icon name="paper-plane" />}
+                href="#"
+              />
+            </Col>
+          </Row>
         </Layout.Footer>
       </Layout>
     )
