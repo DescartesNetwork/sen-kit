@@ -1,40 +1,20 @@
-import React, { forwardRef, Fragment, useEffect, useRef } from 'react'
+import React, { forwardRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import { Row, Col, Card } from 'antd'
-import PerfectScrollbar from 'perfect-scrollbar'
 
-import 'perfect-scrollbar/css/perfect-scrollbar.css'
-
-const ScrollContainer = ({ children }) => {
-  const ref = useRef(null)
-  useEffect(() => {
-    if (ref?.current) new PerfectScrollbar(ref.current)
-  }, [])
-  return (
-    <div
-      style={{
-        height: '100%',
-        overflow: 'scroll',
-        position: 'relative',
-        margin: '0px -24px',
-        padding: '0px 24px',
-      }}
-      ref={ref}
-    >
-      {children}
-    </div>
-  )
-}
+import './style.less'
 
 const DefaultCard = (props) => {
   const { children } = props
   return (
     <div
+      className="widget-no-scrollbar"
       style={{
         width: '100%',
         height: '100%',
         padding: 24,
+        overflow: 'scroll',
       }}
     >
       {children}
@@ -46,8 +26,8 @@ const SolidCard = (props) => {
   const { children } = props
   return (
     <Card
-      className="shadowed"
-      style={{ height: '100%', backgroundColor: '#2D3355' }}
+      className="shadowed widget-no-scrollbar"
+      style={{ height: '100%', backgroundColor: '#2D3355', overflow: 'scroll' }}
       bodyStyle={{ height: '100%' }}
       bordered={false}
     >
@@ -60,8 +40,8 @@ const GlassCard = (props) => {
   const { children } = props
   return (
     <Card
-      className="shadowed"
-      style={{ height: '100%' }}
+      className="shadowed widget-no-scrollbar"
+      style={{ height: '100%', overflow: 'scroll' }}
       bodyStyle={{ height: '100%' }}
     >
       {children}
@@ -92,9 +72,7 @@ const Widget = forwardRef(
           </Col>
           <Col span={24} style={widgetStyle} ref={ref}>
             <Wrapper>
-              <CardWrapper>
-                <ScrollContainer>{children}</ScrollContainer>
-              </CardWrapper>
+              <CardWrapper>{children}</CardWrapper>
             </Wrapper>
           </Col>
         </Row>
