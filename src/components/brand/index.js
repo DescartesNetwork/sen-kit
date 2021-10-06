@@ -20,7 +20,7 @@ const Brand = forwardRef((props, ref) => {
           style={{
             fontFamily: 'Barlow',
             fontSize: size / 2,
-            fontWeight: 400,
+            fontWeight: 300,
           }}
         >
           Sentre
