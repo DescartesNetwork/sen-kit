@@ -8,7 +8,6 @@ import {
   Button,
   Typography,
   Input,
-  Widget,
   Animate,
   Icon,
   Modal,
@@ -74,56 +73,17 @@ function Contents() {
   )
 }
 
-const Wrapper = ({ children }) => (
-  <Row gutter={[16, 16]}>
-    <Col span={24}>{children}</Col>
-  </Row>
-)
-
 class Home extends Component {
   render() {
     return (
       <Row gutter={[16, 16]} align="center" justify="center">
         <Col span={24} style={{ height: 64 }} />
         {/* Row 0 */}
-        <Widget
-          header={
-            <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-              Header
-            </Typography.Text>
-          }
-          type="default"
-          size="large"
-        >
-          <Col span={24}>
-            <Contents />
-          </Col>
-        </Widget>
+        <Col span={24}>
+          <Contents />
+        </Col>
         {/* Row 1 */}
-        <Widget
-          header={
-            <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-              Header
-            </Typography.Text>
-          }
-          type="solid"
-          size="small"
-        >
-          <Contents />
-        </Widget>
-        <Widget type="glass" size="small">
-          {/* <Contents /> */}
-        </Widget>
-        <Widget type="glass" size="small">
-          <Contents />
-        </Widget>
-        {/* Row 2 */}
-        <Widget type="glass" size="small">
-          <Contents />
-        </Widget>
-        <Widget type="solid" size="middle" Wrapper={Wrapper}>
-          <Contents />
-        </Widget>
+        <Contents />
         <Col span={24}>
           <Modal visible={false}>
             <Row gutter={[16, 16]}>

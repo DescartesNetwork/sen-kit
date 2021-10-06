@@ -23,7 +23,7 @@ const Brand = forwardRef((props, ref) => {
             fontWeight: 400,
           }}
         >
-          SenSwap
+          Sentre
         </Typography.Text>
       )}
     </Space>
